@@ -1,7 +1,6 @@
 public class Goalkeeper extends FootballPlayer {
-    final String skill = "I can defend the goal";
 
     public Goalkeeper(String name, int age) {
-        super(name, age, "Goalkeeper");
+        super(name, age, "Goalkeeper", "I can defend the goal");
     }
 }

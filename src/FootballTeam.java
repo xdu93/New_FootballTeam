@@ -1,7 +1,7 @@
 public class FootballTeam {
     public String teamName;
-    private FootballPlayer[] playersOfTheTeam;
-    private int numberOfPlayers = 11;
+    public FootballPlayer[] playersOfTheTeam;
+    public int numberOfPlayers = 11;
 
     public FootballTeam(String teamName) {
         this.teamName = teamName;
@@ -27,5 +27,7 @@ public class FootballTeam {
             } else System.out.println("empty");
         }
     }
+
+
 
 }

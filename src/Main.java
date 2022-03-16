@@ -22,5 +22,12 @@ public class Main {
         newTeam.addPlayer(new Striker("Calum", 28));
 
         newTeam.print();
+
+        System.out.println("____________");
+        System.out.println("SKILLS");
+
+        for (FootballPlayer player : newTeam.playersOfTheTeam) {
+            player.printSkill();
+        }
     }
 }
