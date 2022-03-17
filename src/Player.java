@@ -1,4 +1,4 @@
-public abstract class Player {
+public abstract class Player implements Skillable {
     String name;
     int age;
 
@@ -6,4 +6,5 @@ public abstract class Player {
         this.name = name;
         this.age = age;
     }
+
 }

@@ -1,3 +1,5 @@
+import java.util.SortedMap;
+
 public class Main {
     public static void main(String[] args) {
         FootballTeam newTeam = new FootballTeam("Arsenal");
@@ -21,13 +23,17 @@ public class Main {
         newTeam.addPlayer(new Striker("Laca", 12));
         newTeam.addPlayer(new Striker("Calum", 28));
 
-        newTeam.print();
+        System.out.println("____________");
+        System.out.println(newTeam);
 
         System.out.println("____________");
-        System.out.println("SKILLS");
+        System.out.println("INTRODUCE THE TEAM");
 
-        for (FootballPlayer player : newTeam.playersOfTheTeam) {
-            player.printSkill();
+        for (Object player : newTeam.getPlayersOfTheTeam()) {
+            System.out.println(player);
+            if (player instanceof Skillable){
+                ((Skillable)player).printSkill();
+            }
         }
     }
 }

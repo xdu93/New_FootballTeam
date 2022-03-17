@@ -1,17 +1,21 @@
 public abstract class FootballPlayer extends Player{
     String role;
-    String skillOfFotballer;
+    String footballSkill;
 
-    public FootballPlayer(String name, int age, String role, String skillOfFotballer) {
+    public FootballPlayer(String name, int age, String role, String footballSkill) {
         super(name, age);
         this.role = role;
-        this.skillOfFotballer = skillOfFotballer;
+        this.footballSkill = footballSkill;
     }
 
-    public String getSkillOfFotballer() {
-        return skillOfFotballer;
+    @Override
+    public void printSkill() {
+        System.out.println("I can " + footballSkill + '\n'
+                            + "////////////////////////////////////");
     }
-    public void printSkill(){
-        System.out.println(name + " skill: " + getSkillOfFotballer());
+
+    @Override
+    public String toString() {
+        return "My name is "+ name  + ", I'm " + role + " and I'm " + age + " years old.";
     }
 }
